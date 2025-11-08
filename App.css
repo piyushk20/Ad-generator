@@ -1,0 +1,39 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.stepper-track {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #4a5568; /* gray-600 */
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.stepper-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #4299e1; /* blue-500 */
+  transition: width 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.overlay-controls {
+  transition: opacity 0.2s ease-in-out;
+}
